@@ -1,7 +1,11 @@
+## Fork of BepInEx.ConfigurationManager
+This version is modified to for [SIT](https://stayintarkov.com/github) project by removing the dependency on `BepInEx.BepIn4Manager`, which was preventing the game from loading.
+Full credit to MarC0 / ManlyMarco.
+
 ## Plugin / mod configuration manager for BepInEx
 An easy way to let user configure how a plugin behaves without the need to make your own GUI. The user can change any of the settings you expose, even keyboard shortcuts.
 
-The configuration manager can be accessed in-game by pressing the hotkey (by default F1). Hover over the setting names to see their descriptions, if any.
+The configuration manager can be accessed in-game by pressing the hotkey F12. Hover over the setting names to see their descriptions, if any.
 
 ![Configuration manager](Screenshot.PNG)
 
@@ -11,7 +15,7 @@ There are two versions of this plugin, for BepInEx 5 (version 5.4.20 or newer, m
 - Install and configure the correct BepInEx version for your game (see above).
 - Download latest release for your BepInEx from the [Releases](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases).
 - Extract the plugin directly into your game directory, where the BepInEx folder is (the .dll should end up inside your BepInEx\Plugins folder).
-- Start the game and press F1.
+- Start the game and press F12.
 
 Note: The .xml file include in the release zip is useful for plugin developers when referencing ConfigurationManager.dll in your plugin, it will provide descriptions for types and methods to your IDE. Users can ignore it.
 
