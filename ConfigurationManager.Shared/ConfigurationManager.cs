@@ -24,7 +24,7 @@ namespace ConfigurationManager
 {
     /// <summary>
     /// An easy way to let user configure how a plugin behaves without the need to make your own GUI. The user can change any of the settings you expose, even keyboard shortcuts.
-    /// https://github.com/ManlyMarco/BepInEx.ConfigurationManager
+    /// Originally forked from https://github.com/ManlyMarco/BepInEx.ConfigurationManager
     /// </summary>
     [BepInPlugin(GUID, "Configuration Manager", Version)]
     [Browsable(false)]
@@ -111,7 +111,7 @@ namespace ConfigurationManager
             _showAdvanced = Config.Bind("Filtering", "Show advanced", false);
             _showKeybinds = Config.Bind("Filtering", "Show keybinds", true);
             _showSettings = Config.Bind("Filtering", "Show settings", true);
-            _keybind = Config.Bind("General", "Show config manager", new KeyboardShortcut(KeyCode.F1),
+            _keybind = Config.Bind("General", "Show config manager", new KeyboardShortcut(KeyCode.F12),
                 new ConfigDescription("The shortcut used to toggle the config manager window on and off.\n" +
                                       "The key can be overridden by a game-specific plugin if necessary, in that case this setting is ignored."));
             _hideSingleSection = Config.Bind("General", "Hide single sections", false, new ConfigDescription("Show section title for plugins with only one section"));
